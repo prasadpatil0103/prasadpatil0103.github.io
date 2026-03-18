@@ -37,8 +37,8 @@
     <div class="container">
       <!-- FIXED #1: Hero title is now purely Data Engineer -->
       <h2 class="banner-title">Data Engineer | Analytics Engineering | Scalable Data Pipelines</h2>
-      <!-- FIXED #2: Subtitle now leads with strongest proof points -->
-      <p class="banner-subtitle">Built end-to-end data systems using PySpark, Snowflake, dbt, and FastAPI &nbsp;·&nbsp; Delivered projects across healthcare, transportation, energy, and public safety with measurable results</p>
+      <!-- FIXED #7: Hero subtitle mentions scale (millions of records) -->
+      <p class="banner-subtitle">Building data pipelines that process millions of records · PySpark · Snowflake · dbt · FastAPI · delivering production-ready analytics across healthcare, transportation, energy & public safety</p>
       <div class="banner-buttons">
         <a href="#projects" class="btn btn-banner">EXPLORE PROJECTS</a>
         <a href="resume.pdf" download="Prasad_Patil_Resume.pdf" class="btn btn-resume"><i class="fas fa-file-download"></i> Download Resume</a>
@@ -161,7 +161,8 @@
         <!-- NYC Taxi -->
         <div class="project-card-simple" data-project="project6">
           <div class="project-icon"><i class="fas fa-taxi"></i></div>
-          <h3>NYC Taxi: Scalable Data Engineering Pipeline</h3>
+          <!-- FIXED #2: Scale visible in title -->
+          <h3>Scalable ELT Pipeline for 5.7M+ NYC Taxi Records</h3>
           <!-- FIXED #4: Metric-first card formula -->
           <p>Processed 5.7M+ NYC taxi records using PySpark, Snowflake, and dbt to produce analytics-ready and ML-ready Gold-layer datasets, exposed via FastAPI services.</p>
           <div class="project-tags-simple">
@@ -185,7 +186,8 @@
         <!-- Energy Hub -->
         <div class="project-card-simple" data-project="project4">
           <div class="project-icon"><i class="fas fa-bolt"></i></div>
-          <h3>Energy Hub: Predictive Grid Reliability</h3>
+          <!-- FIXED #3: Result visible in title -->
+          <h3>Energy Demand Forecasting System (93.16% Accuracy)</h3>
           <!-- FIXED #4: Metric-first -->
           <p>Built an energy demand forecasting system with 93.16% SVM accuracy and 32% surge climate simulation insights for grid infrastructure planning.</p>
           <div class="project-tags-simple">
@@ -208,9 +210,9 @@
 
       </div>
 
-      <!-- FIXED #3: Additional projects moved below as secondary section -->
-      <h3 style="text-align:center; color: var(--text-light); font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 4rem 0 2rem; opacity: 0.7;">Additional Projects</h3>
-      <div class="projects-grid-simple">
+      <!-- FIXED #8: Additional projects visually de-emphasized -->
+      <h3 style="text-align:center; color: var(--text-muted); font-size: 0.95rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; margin: 4rem 0 1.5rem; opacity: 0.55;">Additional Projects</h3>
+      <div class="projects-grid-simple" style="opacity: 0.75; transform: scale(0.97); transform-origin: top center;">
 
         <!-- History of AI -->
         <div class="project-card-simple" data-project="project5">
@@ -283,6 +285,28 @@
               <p style="color: var(--text-light); line-height: 1.8;">
                 Demonstrates production-grade <strong style="color: var(--primary-color);">Data Engineering competency</strong> — scalable distributed processing, layered architecture, data governance, and API-first data delivery. The Medallion pattern implemented here is directly applicable to any enterprise data platform. Reflects the core thesis of the Data Engineering track: <strong style="color: var(--accent-color);">great analytics depends on great infrastructure.</strong>
               </p>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="project-visualizations">
+              <h4>Pipeline Architecture</h4>
+              <div style="margin-bottom: 2rem;">
+                <div class="viz-item" style="max-width: 100%;">
+                  <img src="nyc_taxi_pipeline_architecture.svg" alt="NYC Taxi Pipeline Architecture — Medallion Architecture flow from raw ingestion through PySpark, Snowflake, dbt to FastAPI" />
+                  <p class="viz-caption">End-to-end ELT architecture: raw NYC taxi records ingested into Snowflake Bronze layer → PySpark validation at Silver → dbt modular transforms at Gold → FastAPI endpoints for real-time dashboard consumption.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FIXED #4: Engineering Decisions -->
+            <div class="project-features">
+              <h4>Engineering Decisions</h4>
+              <ul class="achievements">
+                <li><strong>Why Medallion Architecture?</strong> Raw taxi data arrives with inconsistent formats and invalid entries. A three-layer Bronze → Silver → Gold structure isolates raw data from cleansed data from analytics-ready data — meaning a schema change in the source never breaks a downstream dashboard.</li>
+                <li><strong>Why PySpark?</strong> 5.7M records cannot be processed efficiently on a single node. PySpark distributes the workload across a cluster, making the Silver-layer validation fast and scalable without memory limits.</li>
+                <li><strong>Why dbt?</strong> SQL transformations written as plain scripts become unmaintainable at scale. dbt enforces modular models, version control, and automated tests — so every Gold-layer dataset is auditable and reproducible.</li>
+                <li><strong>Why FastAPI?</strong> Curated Snowflake tables are only useful if downstream systems can consume them. FastAPI exposes the Gold layer as typed, documented REST endpoints — enabling real-time dashboard queries without direct warehouse access.</li>
+              </ul>
             </div>
 
             <div class="project-tech-stack">
@@ -365,10 +389,18 @@
               </div>
             </div>
 
+            <!-- FIXED #5: Engineering Decisions for Healthcare -->
+            <div class="project-features">
+              <h4>Engineering Decisions</h4>
+              <ul class="achievements">
+                <li><strong>Why Kimball modeling?</strong> Healthcare data spans multiple domains — patients, treatments, costs, employees. Kimball's star schema creates conformed dimensions (Date, Provider, Patient) that allow drill-across reporting between fact tables without joining raw tables in every query.</li>
+                <li><strong>Why dbt modular transformations?</strong> A single 1,000-line stored procedure is impossible to test or reuse. dbt splits the pipeline into small, composable models — each with a single responsibility — so changes are isolated and testable.</li>
+                <li><strong>Why Snowflake?</strong> Healthcare data volumes spike unpredictably during reporting cycles. Snowflake's elastic compute scales up for heavy dbt runs and scales down when idle — keeping costs proportional to usage.</li>
+                <li><strong>Why automated data quality tests?</strong> A dashboard built on dirty data destroys trust faster than no dashboard at all. dbt tests on unique keys and non-null constraints catch data integrity issues at the transformation layer — before any metric reaches Power BI.</li>
+              </ul>
+            </div>
+
             <div class="project-tech-stack">
-              <h4>Tech Stack</h4>
-              <div class="tech-stack">
-                <span><i class="fas fa-code-branch"></i> dbt</span>
                 <span><i class="fas fa-snowflake"></i> Snowflake</span>
                 <span><i class="fas fa-database"></i> SQL (Jinja)</span>
                 <span><i class="fas fa-chart-line"></i> Power BI</span>
@@ -705,7 +737,7 @@
   <section id="skills" class="skills-section">
     <div class="container">
       <h2 class="section-title-simple">TECHNICAL SKILLS</h2>
-      <!-- FIXED #6: Proven stack first, extras last -->
+      <!-- FIXED #6: Proven stack first, weaker tools moved lower -->
       <div class="skills-categories">
 
         <div class="skill-category">
@@ -721,8 +753,15 @@
           <h3>Data Engineering</h3>
           <div class="skill-tags">
             <span>PySpark</span><span>Snowflake</span><span>dbt</span>
-            <span>ETL / ELT Pipelines</span><span>Medallion Architecture</span>
-            <span>FastAPI</span><span>Flask</span>
+            <span>ETL / ELT</span><span>Medallion Architecture</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-icon"><i class="fas fa-rocket"></i></div>
+          <h3>APIs & Deployment</h3>
+          <div class="skill-tags">
+            <span>FastAPI</span><span>Flask</span><span>Docker</span><span>Git / GitHub</span>
           </div>
         </div>
 
@@ -731,17 +770,7 @@
           <h3>Visualization</h3>
           <div class="skill-tags">
             <span>Power BI</span><span>Tableau</span><span>DAX</span>
-            <span>Plotly</span><span>Matplotlib</span><span>Seaborn</span>
-            <span>Excel (VBA, Pivot Tables)</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="category-icon"><i class="fas fa-tools"></i></div>
-          <h3>Tools & DevOps</h3>
-          <div class="skill-tags">
-            <span>Git / GitHub</span><span>Docker</span>
-            <span>VS Code</span><span>Jira</span>
+            <span>Plotly</span><span>Matplotlib</span>
           </div>
         </div>
 
@@ -749,8 +778,8 @@
           <div class="category-icon"><i class="fas fa-brain"></i></div>
           <h3>Machine Learning</h3>
           <div class="skill-tags">
-            <span>Scikit-learn</span><span>XGBoost</span><span>Pandas</span>
-            <span>NumPy</span><span>SMOTE</span><span>SARIMA</span>
+            <span>Scikit-learn</span><span>XGBoost</span><span>SARIMA</span>
+            <span>SMOTE</span><span>Pandas · NumPy</span>
           </div>
         </div>
 
