@@ -59,6 +59,15 @@ body {
   transition: var(--transition);
 }
 
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 0;
+}
+
 .header::after {
   content: '';
   position: absolute;
@@ -78,9 +87,15 @@ body {
   align-items: center;
 }
 
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
+  margin-right: 50px;
   position: relative;
 }
 
