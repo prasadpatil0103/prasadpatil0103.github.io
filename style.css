@@ -130,6 +130,20 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 968px) {
+  .logo {
+    margin-right: 10px;
+  }
+
+  .logo-name {
+    font-size: 1.1rem;
+  }
+
+  .logo-title {
+    display: none;
+  }
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
