@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prasad Patil | Data Engineer Portfolio</title>
   <meta name="description" content="Prasad Patil is a Data Engineer specializing in scalable ELT pipelines, analytics engineering, dimensional modeling, machine learning systems, and cloud data platforms." />
+
+  <!-- Open Graph / LinkedIn / WhatsApp preview -->
+  <meta property="og:title" content="Prasad Patil — Data Engineer Portfolio" />
+  <meta property="og:description" content="Data Engineer · Snowflake · dbt · PySpark · Airflow · 5.7M+ records processed · $21M revenue risk identified · OPT EAD available" />
+  <meta property="og:url" content="https://prasadpatil0103.github.io" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Prasad Patil — Data Engineer" />
+  <meta name="twitter:description" content="Snowflake · dbt · PySpark · Airflow · OPT EAD available" />
+  <link rel="canonical" href="https://prasadpatil0103.github.io" />
+
+  <!-- Favicon (no file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Smooth scroll -->
+  <style>html { scroll-behavior: smooth; }</style>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -27,7 +44,7 @@
         <li><a href="#thinking">Thinking</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#video">Presentation</a></li>
+        
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -91,7 +108,7 @@
     <div class="container">
       <div class="about-layout">
         <div class="about-image-side">
-          <img src="demo.jpeg" alt="Prasad Patil" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--primary-color),var(--accent-secondary));display:flex;align-items:center;justify-content:center;\'><i class=\'fas fa-user\' style=\'font-size:5rem;color:white;\'></i></div>';" />
+          <img src="prasad_photo.jpg" alt="Prasad Patil" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\"width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--primary-color),var(--accent-secondary));display:flex;align-items:center;justify-content:center;\"><i class=\"fas fa-user\" style=\"font-size:5rem;color:white;\"></i></div>';" />
         </div>
         <div class="about-content-side">
           <h2 class="section-title-simple">ABOUT ME</h2>
@@ -103,7 +120,7 @@
           <div class="testimonial-box">
             <i class="fas fa-quote-left quote-icon"></i>
             <p class="testimonial-text">"Prasad's ability to navigate ambiguous data environments is exceptional. At TCS, his proactive leadership and analytical rigor were key to transforming our data workflows and driving team efficiency."</p>
-            <p class="testimonial-author">— Vaishali Pachpute, Senior Manager · Tata Consultancy Services &nbsp;<a href="https://www.linkedin.com/in/ppatil-in/" target="_blank" style="font-size:0.75rem;color:var(--primary-color);text-decoration:none;"><i class="fab fa-linkedin"></i> Verify on LinkedIn</a></p>
+            <p class="testimonial-author">— Vaishali Pachpute, Senior Manager · Tata Consultancy Services</p>
           </div>
           <div class="about-stats-row">
             <div class="stat-box"><h3>2+</h3><p>Years Experience</p></div>
@@ -155,6 +172,7 @@
             <div class="experience-card">
               <div class="card-header">
                 <div>
+                  <!-- FIX 2: Updated JMA title to reflect DE work -->
                   <h3>Data Analytics and Pipeline Engineer</h3>
                   <p class="company"><i class="fas fa-building"></i> JMA Wireless (Syracuse University)</p>
                   <p class="location"><i class="fas fa-map-marker-alt"></i> Syracuse, USA</p>
@@ -185,6 +203,7 @@
             <div class="experience-card">
               <div class="card-header">
                 <div>
+                  <!-- FIX 1: System Analyst -> System Engineer -->
                   <h3>System Engineer</h3>
                   <p class="company"><i class="fas fa-building"></i> Tata Consultancy Services</p>
                   <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
@@ -326,6 +345,8 @@
           <button class="project-expand-btn">View Details <i class="fas fa-chevron-down"></i></button>
         </div>
 
+
+
         <div class="project-card-simple" data-project="project2">
           <div class="project-icon"><i class="fas fa-plane"></i></div>
           <h3>Flight Delay Prediction (6M+ Records)</h3>
@@ -336,6 +357,8 @@
           </div>
           <button class="project-expand-btn">View Details <i class="fas fa-chevron-down"></i></button>
         </div>
+
+
 
       </div>
 
@@ -403,15 +426,16 @@
             <div class="project-features">
               <h4>Approach</h4>
               <ul class="achievements">
-                <li><strong>Star Schema ETL:</strong> Ingested 590,540 IEEE-CIS transactions into a SQLite star schema with fact_transactions and 4 dimension tables.</li>
-                <li><strong>SQL Analytics Layer:</strong> Built 3 production views using CTEs and window functions — fraud summary, high-risk segments, and transaction velocity analysis.</li>
-                <li><strong>XGBoost Classifier:</strong> Applied SMOTE to correct 27.6:1 class imbalance. Final model achieved AUC 0.81, 76% recall, 72% precision.</li>
-                <li><strong>SHAP Explainability:</strong> Identified TransactionAmt, card velocity, and transaction hour as top fraud signals.</li>
+                <li><strong>Star Schema ETL:</strong> Ingested 590,540 IEEE-CIS transactions into a SQLite star schema with fact_transactions and 4 dimension tables (dim_card, dim_date, dim_email, dim_device).</li>
+                <li><strong>SQL Analytics Layer:</strong> Built 3 production views using CTEs and window functions — fraud summary, high-risk segments ranked by card network and hour, and transaction velocity analysis.</li>
+                <li><strong>XGBoost Classifier:</strong> Applied SMOTE to correct 27.6:1 class imbalance. Final model achieved AUC 0.81, 76% recall, 72% precision — baseline logistic regression was 0.59 AUC.</li>
+                <li><strong>SHAP Explainability:</strong> Identified TransactionAmt, card velocity, and transaction hour as top fraud signals, providing interpretable outputs for business stakeholders.</li>
               </ul>
               <h4>Key Findings</h4>
               <ul class="achievements">
                 <li>Discover cards carry a <strong>7.7% fraud rate</strong> — more than double Visa (3.5%).</li>
                 <li>Hours 5–9 UTC represent a high-risk window peaking at <strong>10.5% fraud rate at hour 7</strong>.</li>
+                <li>Discover credit cards at hour 11 reach a <strong>27.1% fraud rate</strong> — the highest single segment.</li>
                 <li><strong>$3.08M</strong> in fraudulent transactions identified across $79.7M total volume.</li>
                 <li>Chi-square test confirms card network is a statistically significant fraud predictor (χ²=368.90, p≈0).</li>
               </ul>
@@ -446,10 +470,11 @@
             <div class="project-features">
               <h4>Architecture</h4>
               <ul class="achievements">
-                <li><strong>Storage:</strong> 30 real job descriptions stored in Amazon S3, covering Data Engineer, Data Scientist, and Data Analyst roles.</li>
+                <li><strong>Storage:</strong> 30 real job descriptions (.txt) stored in Amazon S3, covering Data Engineer, Data Scientist, and Data Analyst roles (10 each).</li>
                 <li><strong>Processing:</strong> AWS Lambda (Python 3.11) loads job files, vectorizes with TF-IDF, and ranks by cosine similarity to the user query.</li>
-                <li><strong>API Layer:</strong> AWS API Gateway exposes a REST endpoint returning top skills and matching job metadata as structured JSON.</li>
-                <li><strong>Frontend:</strong> Streamlit UI with analytics dashboard showing cross-role skill overlap using Plotly.</li>
+                <li><strong>API Layer:</strong> AWS API Gateway exposes a REST endpoint — POST /prod/query returns top skills and matching job metadata as structured JSON.</li>
+                <li><strong>Frontend:</strong> Streamlit UI with an analytics dashboard showing cross-role skill overlap, seniority distribution, and top skills by role using Plotly.</li>
+                <li><strong>Skill Normalization:</strong> Aliases unified to canonical names (e.g. pyspark/apache spark → spark, k8s → kubernetes).</li>
               </ul>
               <h4>Results</h4>
               <ul class="achievements">
@@ -487,16 +512,17 @@
               <h4>Key Findings</h4>
               <ul class="achievements">
                 <li><strong>First Class shipping: 100% late delivery rate</strong> across 27,814 shipments — a systematic scheduling failure, not random variation.</li>
-                <li>Top 3 products hold the #1 revenue-at-risk position in all 23 global regions simultaneously.</li>
+                <li>Top 3 products hold the #1 revenue-at-risk position in all 23 global regions simultaneously — fixing their fulfilment recovers top risk across all geographies.</li>
                 <li>Zero improvement in late delivery rate over 37 months — the 3-year flat line is the finding.</li>
-                <li>Root cause validated statistically: scheduling gap (correlation -0.40 with days_late).</li>
+                <li>Top 25% of customers by spend (generating 58% of revenue) receive <strong>the same late rate as bottom-tier customers</strong> — zero service differentiation.</li>
+                <li>Root cause validated statistically: scheduling gap (correlation -0.40 with days_late), not order characteristics.</li>
               </ul>
               <h4>Technical Approach</h4>
               <ul class="achievements">
                 <li>Star schema in SQLite with 4 dimension tables across 180,519 fact rows.</li>
                 <li>Advanced SQL with LAG(), RANK() PARTITION BY, NTILE(4), and running totals.</li>
                 <li>Chi-square (χ²=41,856, p≈0) and Kruskal-Wallis tests for statistical validation.</li>
-                <li>Prophet demand forecasting: MAPE 0.6%, MAE 28.6 orders/month.</li>
+                <li>Prophet demand forecasting: MAPE 0.6%, MAE 28.6 orders/month — well within 95% confidence intervals.</li>
               </ul>
             </div>
             <div class="project-tech-stack">
@@ -523,19 +549,20 @@
             <p class="project-meta"><i class="fas fa-football-ball"></i> IST 718 — Big Data Analytics · Syracuse University · 2026</p>
             <div class="project-overview">
               <h4>Problem</h4>
-              <p>Fantasy football managers rely on projected points to make lineup decisions. This project investigates whether those projections can be improved using historical player performance data across 8 NFL seasons.</p>
+              <p>Fantasy football managers rely on projected points to make lineup decisions. This project investigates whether those projections can be improved using historical player performance data, player age, and positional stats across 8 NFL seasons.</p>
             </div>
             <div class="project-features">
               <h4>Technical Approach</h4>
               <ul class="achievements">
-                <li><strong>Data Infrastructure:</strong> Pulled 79K player-week observations (2018–2025) from the Sleeper API, stored as season-partitioned Parquet tables.</li>
-                <li><strong>Global GBT Model:</strong> Single gradient boosting model across all positions — RMSE 62.6, MAE 36.8, R² 48.9%.</li>
+                <li><strong>Data Infrastructure:</strong> Pulled 79K player-week observations (2018–2025) from the Sleeper API, stored in a PySpark database as a season-partitioned Parquet table.</li>
+                <li><strong>Year-to-Year Consistency:</strong> Computed lagged correlations per position — WRs most stable (0.69), QBs most volatile (0.63) due to rushing variance.</li>
+                <li><strong>Global GBT Model:</strong> Single gradient boosting model across all positions — RMSE 62.6, MAE 36.8, R² 48.9%. Prior season PPR was the strongest single predictor by far.</li>
                 <li><strong>Position-Specific Models:</strong> Separate GBT models per position. TEs most predictable (RMSE 39.98), QBs highest variance (RMSE 89.36).</li>
               </ul>
               <h4>2026 Projection Highlights</h4>
               <ul class="achievements">
-                <li>QB: Jaxson Dart projected at 362.5 PPR points.</li>
-                <li>RB: Breece Hall leads at 270.4.</li>
+                <li>QB: Jaxson Dart projected at 362.5 PPR points — model identifies age trajectory over prior-season output.</li>
+                <li>RB: Breece Hall leads at 270.4 — consistent producers rewarded.</li>
                 <li>WR: Amon-Ra St. Brown tops at 263.3 projected points.</li>
                 <li>TE: Trey McBride leads at 241.2, Travis Kelce at 228.5 despite age.</li>
               </ul>
@@ -558,6 +585,7 @@
           </div>
         </div>
 
+        <!-- FIX 5: NYC Taxi GitHub link updated to specific repo -->
         <div class="project-details" id="project6">
           <div class="project-details-content">
             <h3>NYC Taxi: Scalable Data Engineering Pipeline</h3>
@@ -577,6 +605,7 @@
               <h4>Results</h4>
               <ul class="achievements">
                 <li>Processed and transformed <strong>5.7M+ records</strong> through a scalable ELT workflow.</li>
+                <li>Reduced invalid records before downstream analytics through Silver-layer quality enforcement.</li>
                 <li>Produced analytics-ready and ML-ready Gold datasets for demand, fare, and trip behavior analysis.</li>
                 <li>Enabled real-time access via <strong>FastAPI</strong> endpoints.</li>
               </ul>
@@ -693,6 +722,8 @@
           </div>
         </div>
 
+
+
         <div class="project-details" id="project2">
           <div class="project-details-content">
             <h3>Flight Delay Prediction (6M+ Records)</h3>
@@ -717,6 +748,8 @@
             <button class="project-close-btn"><i class="fas fa-times"></i> Close Details</button>
           </div>
         </div>
+
+
 
       </div>
     </div>
@@ -756,14 +789,15 @@
     <div class="container">
       <h2 class="section-title-simple">TECHNICAL SKILLS</h2>
 
+      <!-- Proficiency Tiers -->
       <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem; justify-content:center;">
-        <div style="background:rgba(99,102,241,0.12); border:1px solid rgba(99,102,241,0.3); border-radius:12px; padding:1.25rem 1.5rem; flex:1; min-width:220px;">
+        <div style="background:rgba(var(--primary-rgb,99,102,241),0.12); border:1px solid rgba(var(--primary-rgb,99,102,241),0.3); border-radius:12px; padding:1.25rem 1.5rem; flex:1; min-width:220px;">
           <h4 style="color:var(--primary-color,#6366f1); font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:0.75rem;"><i class="fas fa-star"></i> Expert</h4>
           <div class="skill-tags">
             <span>Python</span><span>SQL</span><span>Snowflake</span><span>dbt</span><span>PySpark</span>
           </div>
         </div>
-        <div style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.25); border-radius:12px; padding:1.25rem 1.5rem; flex:1; min-width:220px;">
+        <div style="background:rgba(var(--accent-rgb,139,92,246),0.1); border:1px solid rgba(var(--accent-rgb,139,92,246),0.25); border-radius:12px; padding:1.25rem 1.5rem; flex:1; min-width:220px;">
           <h4 style="color:var(--accent-secondary,#8b5cf6); font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:0.75rem;"><i class="fas fa-check-circle"></i> Proficient</h4>
           <div class="skill-tags">
             <span>Apache Kafka</span><span>Apache Airflow</span><span>AWS</span><span>Power BI</span><span>Docker</span><span>Delta Lake</span><span>FastAPI</span><span>XGBoost</span><span>Tableau</span>
@@ -896,6 +930,7 @@
           <i class="fas fa-file-download"></i> Download Resume
         </a>
       </div>
+      <!-- FIX 3: Updated graduation status -->
       <p class="section-subtitle">Open to Data Engineer, Analytics Engineer, and Data Platform roles · MS Applied Data Science Syracuse University May 2026 · Authorized to work in the US on OPT EAD (June 2026 – June 2027, STEM extension eligible to June 2029) · Seeking full-time opportunities</p>
       <div class="contact-grid">
         <div class="contact-card">
@@ -911,6 +946,7 @@
         <div class="contact-card">
           <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
           <h3>LinkedIn</h3>
+          <!-- FIX 4: Corrected LinkedIn URL -->
           <a href="https://www.linkedin.com/in/ppatil-in/" target="_blank" rel="noopener noreferrer">Connect with me</a>
         </div>
         <div class="contact-card">
@@ -942,7 +978,7 @@
       </div>
       <div style="margin-top:1.5rem;">
         <a href="https://github.com/prasadpatil0103" target="_blank" rel="noopener noreferrer"
-           style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--primary-color,#6366f1); text-decoration:none; font-weight:600; font-size:0.95rem; border:1px solid rgba(99,102,241,0.4); padding:0.6rem 1.5rem; border-radius:25px;">
+           style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--primary-color,#6366f1); text-decoration:none; font-weight:600; font-size:0.95rem; border:1px solid rgba(99,102,241,0.4); padding:0.6rem 1.5rem; border-radius:25px; transition:all 0.2s;">
           <i class="fab fa-github"></i> View Full GitHub Profile
         </a>
       </div>
@@ -959,6 +995,7 @@
         </div>
         <p>Prasad Patil | Data Engineer | Analytics Engineering Portfolio</p>
         <div class="footer-links">
+          <!-- FIX 4: Corrected LinkedIn URL in footer -->
           <a href="https://www.linkedin.com/in/ppatil-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/prasadpatil0103" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="mailto:prasad.patil.ds@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -983,6 +1020,8 @@
         if (link.getAttribute('href') === '#' + current) link.classList.add('active');
       });
     });
+
+    // Add active nav style
     const style = document.createElement('style');
     style.textContent = '.nav-links a.active { color: var(--primary-color, #6366f1) !important; border-bottom: 2px solid var(--primary-color, #6366f1); }';
     document.head.appendChild(style);
